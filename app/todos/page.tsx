@@ -4,6 +4,7 @@ import { createClient } from "@/lib/supabase/server";
 import { montserrat } from "../font/fonts";
 import TodoInputForm from "@/components/todo-input-form";
 import Todos from "@/components/todos";
+import StopWatch from "@/components/stop-watch";
 
 export default async function Page() {
   const supabase = await createClient();
@@ -22,6 +23,7 @@ export default async function Page() {
 
   return (
     <div>
+      <StopWatch />
       <TodoInputForm user_id={data?.user.id} />
       {todos && todos.length > 0 && (
         <>
