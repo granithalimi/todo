@@ -15,7 +15,6 @@ import { Label } from "@/components/ui/label";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import logo from "@/app/favicon.ico";
 import Image from "next/image";
 
 export function LoginForm({
@@ -54,7 +53,7 @@ export function LoginForm({
       <Card>
         <div className="flex justify-center mt-6">
           <Link href={"/"}>
-            <Image className="w-10" src={logo} alt="Home Page" />
+            <Image width={70} height={70} src={'/images/todo-logo.png'} alt="Home Page" />
           </Link>
         </div>
         <CardHeader>
@@ -96,7 +95,7 @@ export function LoginForm({
                 />
               </div>
               {error && <p className="text-sm text-red-500">{error}</p>}
-              <Button type="submit" className="w-full" disabled={isLoading}>
+              <Button type="submit" variant={"secondary"} className="w-full" disabled={isLoading}>
                 {isLoading ? "Logging in..." : "Login"}
               </Button>
             </div>

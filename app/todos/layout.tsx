@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { LogoutButton } from "@/components/logout-button";
 import { poppins } from "../font/fonts";
+import Image from "next/image";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -10,7 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           {/* home div */}
           <div className=" flex items-center">
             <Link href={"/"} className={`${poppins.className} text-gray-500 hover:text-white duration-500`}>
-              Home
+              <Image width={50} height={50} alt="Todo logo" src={"/images/todo-logo.png"} />
             </Link>
           </div>
           {/* buttons  */}
